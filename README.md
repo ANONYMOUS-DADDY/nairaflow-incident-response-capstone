@@ -80,7 +80,26 @@ All activities are structured into three phases:
 * Zero downtime to payment processing systems
 
 ---
-
+Attack Flow Diagram 
+Phishing Email
+      ↓
+Developer Workstation Compromise
+      ↓
+AWS IAM Credential Theft
+      ↓
+AssumeRole Abuse
+      ↓
+Staging Environment Access
+      ↓
+Production VPC Lateral Movement
+      ↓
+RDS Targeting (PII + Transactions)
+      ↓
+Outbound C2 Traffic Detected
+      ↓
+SIEM Alert → Incident Response Triggered
+      ↓
+Containment (IAM Quarantine + Token Revocation)
 ## Repository Structure
 
 See `/phase-*` and `/reports` directories for full documentation, forensic analysis, and remediation plans.
